@@ -119,7 +119,7 @@
                             <option value="buscando">
                             Estoy buscando oportunidades activamente
                             </option>
-                            <option value="capital_indisponible">
+                            <option value="capitalizando">
                             Estoy esperando capitalizarme
                             </option>
                             <option value="profesional">
@@ -188,13 +188,14 @@
                         </div>
 
                         <input type="hidden" id="plan" name="plan" value="nacional">
-                        <input type="hidden" id="origen" name="origen" value="Landing">
+                        <input type="hidden" id="origen" name="origen" value="landing">
                         <input type="hidden" id="gdpr" name="gdpr" value="true">
 
-                        <a href="#" class="btn btn-primary btn-hero">
+                        <button type="submit" class="btn btn-primary btn-hero">
                           <img src="images/radar/icon-check-blanco.png" alt="filtramos" class="logo-icon">
                           Acceder a lista prioritaria
-                        </a>
+                        </button>
+
 											</div>
 										</form>
 
@@ -265,6 +266,7 @@
 document
   .getElementById("radarsel-form")
   .addEventListener("submit", async function(e) {
+
     e.preventDefault();
     const data = {
       nombre: document.getElementById("name").value,
