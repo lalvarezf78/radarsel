@@ -306,7 +306,7 @@ button { font-family: var(--font); }
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 0.8125rem;
+  font-size: 0.99rem;
   font-weight: 600;
   color: var(--gray-600);
 }
@@ -359,7 +359,7 @@ button { font-family: var(--font); }
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 0.775rem;
+  font-size: 0.99rem;
   font-weight: 500;
   color: var(--gray-600);
 }
@@ -454,11 +454,11 @@ button { font-family: var(--font); }
 /* ── Cómo funciona ────────────────────────────────────────── */
 #profesionales {
   position: relative;
-  z-index: 9;
-  background: var(--gray-50);
+  z-index: 6;
+  background: var(--white);
   margin-top: calc(var(--clip-h) * -1);
-  /* top ↗ ascending · bottom ↘ descending */
-  clip-path: polygon(0 var(--clip-h), 100% 0, 100% 100%, 0 calc(100% - var(--clip-h)));
+  /* top ↘ descending · bottom ↗ ascending */
+  clip-path: polygon(0 0, 100% var(--clip-h), 100% calc(100% - var(--clip-h)), 0 100%);
 }
 
 #como-funciona {
@@ -533,17 +533,22 @@ button { font-family: var(--font); }
   margin-bottom: 8px;
   letter-spacing: -0.015em;
 }
-.step-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+.step-card p { 
+  font-size: 0.98rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
 
-/* ── Ventajas ─────────────────────────────────────────────── */
+/* ── Ventajas ────────────────────────────────────────────── */
 #ventajas {
   position: relative;
-  z-index: 8;
-  background: var(--white);
+  z-index: 9;
+  background: var(--gray-50);
   margin-top: calc(var(--clip-h) * -1);
-  /* top ↘ descending · bottom ↗ ascending */
-  clip-path: polygon(0 0, 100% var(--clip-h), 100% calc(100% - var(--clip-h)), 0 100%);
+  /* top ↗ ascending · bottom ↘ descending */
+  clip-path: polygon(0 var(--clip-h), 100% 0, 100% 100%, 0 calc(100% - var(--clip-h)));
 }
+
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -581,16 +586,20 @@ button { font-family: var(--font); }
   margin-bottom: 5px;
   letter-spacing: -0.01em;
 }
-.adv-body p { font-size: 0.8375rem; color: var(--gray-500); line-height: 1.55; }
+.adv-body p { 
+  font-size: 0.98rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
 
 /* ── Social proof ─────────────────────────────────────────── */
 #prueba-social {
   position: relative;
-  z-index: 7;
-  background: var(--gray-50);
+  z-index: 8;
+  background: var(--white);
   margin-top: calc(var(--clip-h) * -1);
-  /* top ↗ ascending · bottom ↘ descending */
-  clip-path: polygon(0 var(--clip-h), 100% 0, 100% 100%, 0 calc(100% - var(--clip-h)));
+  /* top ↘ descending · bottom ↗ ascending */
+  clip-path: polygon(0 0, 100% var(--clip-h), 100% calc(100% - var(--clip-h)), 0 100%);
 }
 .stat-row {
   display: flex;
@@ -664,11 +673,11 @@ button { font-family: var(--font); }
 /* ── Precios ──────────────────────────────────────────────── */
 #precios {
   position: relative;
-  z-index: 6;
-  background: var(--white);
+  z-index: 9;
+  background: var(--gray-50);
   margin-top: calc(var(--clip-h) * -1);
-  /* top ↘ descending · bottom ↗ ascending */
-  clip-path: polygon(0 0, 100% var(--clip-h), 100% calc(100% - var(--clip-h)), 0 100%);
+  /* top ↗ ascending · bottom ↘ descending */
+  clip-path: polygon(0 var(--clip-h), 100% 0, 100% 100%, 0 calc(100% - var(--clip-h)));
 }
 .pricing-grid {
   display: grid;
@@ -737,12 +746,12 @@ button { font-family: var(--font); }
 
 /* ── FAQ ──────────────────────────────────────────────────── */
 #faq {
-  position: relative;
-  z-index: 6;
-  background: var(--white);
+ position: relative;
+  z-index: 9;
+  background: var(--gray-50);
   margin-top: calc(var(--clip-h) * -1);
-  /* top ↘ descending · bottom ↗ ascending */
-  clip-path: polygon(0 0, 100% var(--clip-h), 100% calc(100% - var(--clip-h)), 0 100%);
+  /* top ↗ ascending · bottom ↘ descending */
+  clip-path: polygon(0 var(--clip-h), 100% 0, 100% 100%, 0 calc(100% - var(--clip-h)));
 }
 .faq-list {
   max-width: 740px;
@@ -1182,4 +1191,137 @@ form .btn-hero {
 .cta-form .cta-note {
   text-align: center;
   margin-top: 1rem;
+}
+
+/* ── Hero lanzamiento ── */
+.section--hero-launch {
+  text-align: center;
+}
+
+.section-inner--narrow {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.launch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(119, 187, 66, 0.12);
+  color: #77BB42;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.launch-dot {
+  width: 7px;
+  height: 7px;
+  background: #77BB42;
+  border-radius: 50%;
+  animation: pulse-dot 1.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hero-launch-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.hero-launch-desc {
+  font-size: 17px;
+  color: var(--color-text-secondary, #555);
+  line-height: 1.65;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero-launch-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 183, 0, 0.1);
+  color: #a07000;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.hero-launch-cta {
+  margin-bottom: 2.5rem;
+}
+
+.btn--large {
+  padding: 15px 36px;
+  font-size: 16px;
+}
+
+.hero-launch-cta-note {
+  font-size: 12px;
+  color: var(--color-text-tertiary, #999);
+  margin-top: 8px;
+}
+
+.hero-launch-features {
+  background: rgba(119, 187, 66, 0.06);
+  border: 1px solid rgba(119, 187, 66, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hero-launch-features-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-tertiary, #999);
+  margin-bottom: 1rem;
+}
+
+.hero-launch-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.hero-launch-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 0.65rem;
+}
+
+.hero-launch-features-list li svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.hero-launch-features-divider {
+  border-top: 1px solid rgba(119, 187, 66, 0.2);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.hero-launch-after-trial {
+  font-size: 12px;
+  color: var(--color-text-tertiary, #999);
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.5;
 }

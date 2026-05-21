@@ -80,7 +80,7 @@
           <h3>Contacto</h3>
           <p>
           <br>- Correo: aylamarketingia@gmail.com
-          <br>- WhasApp Bussiness: +34 000 000 000
+          <br>- WhatsApp Business: +34 644 641 299
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@
           <br>Déjanos tu email y la ciudad que te interesa para <strong><span class="accent">avisarte cuando esté disponible</span></strong>.
           </p>
 
-										<form id="radarsel-form">
+										<form method="post" action="#">
 											<div class="row gtr-uniform">
 												<div class="col-6 col-12-xsmall">
 													<label for="name">Nombre</label>
@@ -110,8 +110,8 @@
 													<input type="email" name="email" id="email" value="" />
 												</div>
 												<div class="col-12">
-													<label for="fase_inversor">¿En qué punto estás ahora mismo?</label>
-													<select name="fase_inversor" id="fase_inversor">
+													<label for="estado">¿En qué punto estás ahora mismo?</label>
+													<select name="estado" id="estado">
                             <option value="">Selecciona una opción</option>
                             <option value="aprendiendo">
                             Estoy aprendiendo sobre inversión inmobiliaria
@@ -119,7 +119,7 @@
                             <option value="buscando">
                             Estoy buscando oportunidades activamente
                             </option>
-                            <option value="capitalizando">
+                            <option value="capital_indisponible">
                             Estoy esperando capitalizarme
                             </option>
                             <option value="profesional">
@@ -260,44 +260,5 @@
 
 
 <script src="assets/js/radarsel.js"></script>
-
-
-<script>
-document
-  .getElementById("radarsel-form")
-  .addEventListener("submit", async function(e) {
-
-    e.preventDefault();
-    const data = {
-      nombre: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      ciudad: document.getElementById("ciudad").value,
-      fase_inversor: document.getElementById("fase_inversor").value,
-      plan: document.getElementById("plan").value,
-      origen: document.getElementById("origen").value,
-      gdpr: document.getElementById("gdpr").value
-    };
-
-    try {
-      const response = await fetch(
-        "https://n8n.aylamarketing.es/webhook-test/radarsel_crm",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        }
-      );
-      const result = await response.json();
-      alert("Formulario enviado correctamente 😄");
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-      alert("Error enviando formulario");
-    }
-});
-</script>
-
 </body>
 </html>
