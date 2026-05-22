@@ -1121,7 +1121,9 @@ document
         }
       );
       const result = await response.json();
-      alert("Formulario enviado correctamente 😄");
+      alert("¡Enhorabuena! Ya estas dentro. Te hemos enviado un email con el acceso a RadarSEL.");
+      // document.getElementById("successMessage").classList.remove("hidden");
+
       console.log(result);
     } catch (error) {
       console.error(error);
@@ -1131,4 +1133,5 @@ document
 </script>
 
 </body>
+
 </html>
