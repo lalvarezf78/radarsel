@@ -189,7 +189,11 @@
 
                         <input type="hidden" id="plan" name="plan" value="nacional">
                         <input type="hidden" id="origen" name="origen" value="landing">
-                        <input type="hidden" id="gdpr" name="gdpr" value="true">
+
+                        <div class="col-12 gdpr-consent">
+                          <input type="checkbox" id="gdpr" name="gdpr" value="true" required>
+                          <label for="gdpr">Acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y autorizo el tratamiento de mis datos para recibir información de RadarSEL.</label>
+                        </div>
 
                         <button type="submit" class="btn btn-primary btn-hero">
                           <img src="images/radar/icon-check-blanco.png" alt="filtramos" class="logo-icon">
@@ -274,7 +278,7 @@ document
       fase_inversor: document.getElementById("fase_inversor").value,
       plan: document.getElementById("plan").value,
       origen: document.getElementById("origen").value,
-      gdpr: document.getElementById("gdpr").value
+      gdpr: document.getElementById("gdpr").checked
     };
 
     try {

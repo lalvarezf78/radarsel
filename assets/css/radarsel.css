@@ -1097,6 +1097,36 @@ form .col-6.col-12-small {
   margin-bottom: 1.5rem;
 }
 
+.gdpr-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.gdpr-consent input[type="checkbox"] {
+  flex: 0 0 auto;
+  margin: 0.2rem 0 0;
+}
+
+.gdpr-consent label {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.gdpr-consent a {
+  color: #77BB42;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#cta-final .gdpr-consent label {
+  color: rgba(255,255,255,0.82);
+}
+
 /* Botón */
 form .btn-hero {
   margin-top: 0.5rem;

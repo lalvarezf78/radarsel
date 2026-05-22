@@ -999,7 +999,11 @@
                         <input type="hidden" id="ciudad" name="ciudad" value="madrid">
                         <input type="hidden" id="plan" name="plan" value="radarpro">
                         <input type="hidden" id="origen" name="origen" value="landing">
-                        <input type="hidden" id="gdpr" name="gdpr" value="true">
+
+                        <div class="col-12 gdpr-consent">
+                          <input type="checkbox" id="gdpr" name="gdpr" value="true" required>
+                          <label for="gdpr">Acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y autorizo el tratamiento de mis datos para recibir información de RadarSEL.</label>
+                        </div>
 
                         <button type="submit" class="btn btn-primary btn-hero">
                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -1106,7 +1110,7 @@ document
       fase_inversor: document.getElementById("fase_inversor").value,
       plan: document.getElementById("plan").value,
       origen: document.getElementById("origen").value,
-      gdpr: document.getElementById("gdpr").value
+      gdpr: document.getElementById("gdpr").checked
     };
 
     try {
