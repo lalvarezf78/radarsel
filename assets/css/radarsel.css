@@ -1128,9 +1128,23 @@ form .col-6.col-12-small {
   text-underline-offset: 2px;
 }
 
+#cta-final form {
+  text-align: left;
+}
+
+#cta-final form label {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+#cta-final .gdpr-consent {
+  justify-content: flex-start;
+}
+
 #cta-final .gdpr-consent label {
   color: rgba(255,255,255,0.82);
 }
+
 
 /* Botón */
 form .btn-hero {
