@@ -854,6 +854,89 @@ button { font-family: var(--font); }
   flex-wrap: wrap;
 }
 
+
+/* -- Modal formulario gratuito -- */
+body.modal-open { overflow: hidden; }
+.radarsel-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.radarsel-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.radarsel-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2,35,61,0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.radarsel-modal__dialog {
+  position: relative;
+  width: min(100%, 520px);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--blue);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(2,35,61,0.28);
+  padding: 32px;
+}
+.radarsel-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.radarsel-modal__close:hover { background: rgba(255,255,255,0.18); }
+.radarsel-modal__intro { margin-bottom: 22px; text-align: left; }
+.radarsel-modal__intro .launch-badge { margin-bottom: 16px; }
+.radarsel-modal__intro h2 {
+  color: var(--white);
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.radarsel-modal__intro p {
+  color: rgba(255,255,255,0.68);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.radarsel-modal form {
+  margin: 0;
+  max-width: none;
+  text-align: left;
+}
+.radarsel-modal form label { color: var(--white); }
+.radarsel-modal .gdpr-consent label { color: rgba(255,255,255,0.82); }
+.radarsel-modal form .btn-hero {
+  width: 100%;
+  justify-content: center;
+}
+
 /* ── Footer ───────────────────────────────────────────────── */
 #footer {
   position: relative;
@@ -947,6 +1030,9 @@ button { font-family: var(--font); }
   #hero { padding: 110px 0 calc(52px + var(--clip-h)); }
   #cta-final { padding: 72px 0 calc(72px + var(--clip-h)); }
   #footer { padding: calc(40px + var(--clip-h)) 0 28px; }
+  .radarsel-modal { padding: 16px; }
+  .radarsel-modal__dialog { padding: 28px 20px 22px; max-height: calc(100vh - 32px); }
+  .radarsel-modal__intro h2 { font-size: 1.45rem; }
 }
 
 @media (max-width: 540px) {

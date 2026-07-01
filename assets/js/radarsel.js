@@ -70,6 +70,7 @@
   // ── Smooth scroll for anchor links ───────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
+      if (link.hasAttribute('data-modal-open')) return;
       const target = document.querySelector(link.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
